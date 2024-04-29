@@ -7,29 +7,33 @@ const miniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/js/bootstrap-theme.js', './src/scss/bootstrap-theme.scss'],
-  output: { 
+  entry: ['./src/js/bootstrap-theme.js',
+    './src/scss/bootstrap-theme.scss'],
+  output: {
     filename: 'js/bootstrap-theme.min.js',
     path: path.resolve(__dirname, 'dist'),
-    //assetModuleFilename: '../fonts/bc-sans/[hash][ext][query]' // move fonts into local directory, file loader deprecated
-
   },
-  devServer:{
-    static: path.resolve(__dirname, 'dist'),
+  /*
+  optimization: {
+    minimize: false // to ensure the output isn't minfied
+  },
+  */
+  devServer: {
+    static: path.resolve(__dirname, './'), // changed the directory where the pages are served from
     port: 8080,
     hot: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: path.join(__dirname, "/index.html"),
       template: './src/index.html',
       minify: {
         collapseWhitespace: false // to ensure that the exported html file is not minified
       }
     }),
-  
+
     new HtmlWebpackPlugin({
-      filename: 'demo.html',
+      filename: path.join(__dirname, "/demo.html"), //updated output for the html
       template: './src/demo.html',
       minify: {
         collapseWhitespace: false
@@ -37,27 +41,25 @@ module.exports = {
     }),
 
     new HtmlWebpackPlugin({
-      filename: 'introduction.html',
+      filename: path.join(__dirname, "/introduction.html"),
       template: './src/introduction.html',
       minify: {
         collapseWhitespace: false
       }
     }),
-    
-    //new HtmlWebpackPlugin({ template: './src/index.html' }),
     new miniCssExtractPlugin({
       filename: 'css/bootstrap-theme.min.css',
     })
-  
+
   ],
   module: {
     rules: [
-       // move fonts into local directory
-       {
-        test      : /\.(otf|ttf|eot|woff|woff2|svg)$/,
-        type      : 'asset/resource',
-        generator : {
-          filename : 'fonts/bc-sans/[name][ext][query]',
+      // move fonts into local directory
+      {
+        test: /\.(otf|ttf|eot|woff|woff2|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/bc-sans/[name][ext][query]',
         }
       },
 

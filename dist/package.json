@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-v5-theme",
+  "version": "1.0.0",
+  "description": "Goverment of British Columbia Bootstrap v5 theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcgov/bootstrap-v5-theme.git"
+  },
+  "keywords": [
+    "Bootstrap"
+  ],
+  "author": "Anjana Kuruwita Arachchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcgov/bootstrap-v5-theme/issues"
+  },
+  "homepage": "https://github.com/bcgov/bootstrap-v5-theme#readme"
+}
