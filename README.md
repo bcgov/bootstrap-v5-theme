@@ -85,3 +85,46 @@ We combined the best of all projects and leverage the latest
 Refer to the [official Bootstrap documentation](https://getbootstrap.com/docs/5.3/extend/approach/) to learn about extending or enhancing this theme. 
 
 Tooling and build follow the same steps as [SCSS To Modify Variables/Themes section](#scss-to-modify-variablesthemes)
+
+# NPM Package
+
+https://www.npmjs.com/package/@bcgov/bootstrap-v5-theme
+
+
+## NPM Package Maintenance
+
+If you would like to update the project and would like to push your changes to the npm registry, the following will be useful.
+To push to the npm registry, you must ensure that the version number has been updated to reflect any of the changes that you’ve made. Upon following semantic versioning, and updating the version number in `package.json`  you can then publish the package in your own namespace.
+
+1. Ensure you are logged into your npm account. To log in via the terminal, run the following:
+
+```bash
+npm login
+```
+
+- upon successful completion you will see the following: 
+
+```bash
+Logged in on https://registry.npmjs.org/.
+```
+
+2. Now you can publish your package
+
+    - Run the following command in your termnial
+    
+```bash
+npm publish --access=public
+```
+
+If you are publishing to a namespace, you will have to ensure that `--acess=public` is included in your run command as packages for an org are private by default
+
+
+Note: You can test your changes locally by changing the name in the package.json to `@<your-namespace>/bootstrap-v5-theme` and publishing there. Once you are satisfied, you can republish to the @bcgov org.
+    
+
+## Updating the Theme
+
+If Bootstrap has a minor update and you wish to update the minified CSS and JS files, do the following:
+1. Run `npm run build` in order to build the needed assests.
+2. Mark a new release on GitHub 
+3. Publish the updated dist folder to NPM JS Registry as a new NPM package version

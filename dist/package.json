@@ -1,6 +1,6 @@
 {
-  "name": "@anjanak13/bootstrap-v5-theme",
-  "version": "1.0.1",
+  "name": "@bcgov/bootstrap-v5-theme",
+  "version": "1.0.0",
   "description": "Goverment of British Columbia Bootstrap v5 theme",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "Bootstrap"
   ],
   "author": "Anjana Kuruwita Arachchi",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/bcgov/bootstrap-v5-theme/issues"
   },

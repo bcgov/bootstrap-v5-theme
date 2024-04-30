@@ -3,35 +3,7 @@
 
 # 🚀 Government of British Columbia Bootstrap v5 npm Package
 
-This package contains assets such as images, fonts as well as minified CSS and JS files to incorporate into your own project. 
-
-## Package Maintenance 
-If you would like to update the project and would like to push your changes to the npm registry, the following will be useful.
-To push to the npm registry, you must ensure that the version number has been updated to reflect any of the changes that you’ve made. Upon following semantic versioning, and updating the version number in `package.json`  you can then publish the package in your own namespace.
-
-1. Ensure you are logged into your npm account. To log in via the terminal, run the following:
-
-```bash
-npm login
-```
-
-- upon successful completion you will see the following: 
-
-```bash
-Logged in on https://registry.npmjs.org/.
-```
-
-2. Now you can publish your package
-
-    - To do so, change the name in the package.json to `@<your-namespace>/bootstrap-v5-theme`
-    - Run the following command in your termnial
-    
-```bash
-npm publish --access=public
-```
-
-If you are publishing to a namespace, you will have to ensure that `--acess=public` is included in your run command as packages for an org are private by default
-
+This package contains assets such as images, fonts, scss as well as minified CSS and JS files to incorporate into your own project. 
 
 ## Use of the Package
 
@@ -49,3 +21,5 @@ If you are publishing to a namespace, you will have to ensure that `--acess=publ
 ```bash
 const bootstrapTheme = require('@<your-namespace>bootstrap-v5-theme');`
 ```
+
+For more details, please visit the [project Github page](https://github.com/bcgov/bootstrap-v5-theme)
