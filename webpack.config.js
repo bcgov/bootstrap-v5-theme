@@ -4,6 +4,7 @@ const path = require('path')
 const autoprefixer = require('autoprefixer')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const miniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -49,8 +50,13 @@ module.exports = {
     }),
     new miniCssExtractPlugin({
       filename: 'css/bootstrap-theme.min.css',
+    }),
+    //Copying the scss files to dist
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/scss", to: "scss" }
+      ],
     })
-
   ],
   module: {
     rules: [
