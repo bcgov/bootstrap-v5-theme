@@ -55,8 +55,8 @@ We combined the best of all projects and leverage the latest
         After your tools are in place, you should install some packages. In the working directory:
 
         ```bash
-        git clone https://github.com/anjanak13/bootstrap-theme.git
-        cd bootstrap-theme
+        git clone https://github.com/bcgov/bootstrap-v5-theme.git
+        cd bootstrap-v5-theme
         npm install
         ```
 
