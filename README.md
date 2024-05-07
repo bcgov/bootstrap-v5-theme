@@ -4,7 +4,7 @@
 
 # 🚀 Government of British Columbia Bootstrap v5 Theme
 
-[Demonstrations of the theme](https://anjanak13.github.io/bootstrap-theme/dist/index.html)
+[Demonstrations of the theme](https://bcgov.github.io/bootstrap-v5-theme/)
 
 A Bootstrap version 5.3 BC Government look-and-feel featuring:
 
