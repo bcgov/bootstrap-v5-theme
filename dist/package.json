@@ -1,6 +1,6 @@
 {
   "name": "@bcgov/bootstrap-v5-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Goverment of British Columbia Bootstrap v5 theme",
   "main": "index.js",
   "scripts": {
