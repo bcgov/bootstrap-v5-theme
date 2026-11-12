@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1
+
+- Update to Bootstrap v5.3.9
+
 ## 1.1.0
 
 ### JavaScript
